@@ -19,4 +19,4 @@ Route::get('/admin', function () {
     return view('superAdmin/listAdmin');
 });
 
-Route::get('/superadmin', 'superAdmin\userController@listAdmin');
+Route::get('/superadmin', 'SuperAdmin\SuperAdminController@ShowListAdmin') ->name('superadmin.showlistadmin');
