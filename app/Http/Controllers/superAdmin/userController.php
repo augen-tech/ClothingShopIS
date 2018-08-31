@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
-    public function listAdmin()
+    public function ShowListAdmin()
     {
         return view('superAdmin/listAdmin');
     }
