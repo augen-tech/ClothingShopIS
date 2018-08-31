@@ -11,4 +11,9 @@ class SuperAdminController extends Controller
     {
         return view('superAdmin/listAdmin');
     }
+
+    public function FormCreateAdmin()
+    {
+        return view('superAdmin/formCreateAdmin');
+    }
 }
