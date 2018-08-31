@@ -46,8 +46,7 @@
                                             <div class="d-flex">
                                                 <div class="mr-auto">
                                                     <div class="form-group">
-                                                        <button id="demo-btn-addrow" class="btn btn-primary btn-sm"><i class="icon wb-plus" aria-hidden="true"></i>Add New Admin
-                                                        </button> 
+                                                    <a href="{{ route('superadmin.formCreateAdmin')}}"><button id="demo-btn-addrow" class="btn btn-primary btn-sm"><i class="icon wb-plus" aria-hidden="true"></i>Add New Admin</button> </a>
                                                     </div>
                                                 </div>
                                                 <div class="ml-auto">
