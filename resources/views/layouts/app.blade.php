@@ -139,13 +139,14 @@
                         <li class="nav-small-cap">MENU</li>
                         <li>
                             <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a>
-                        </li>
+                        </li>      
                         <li>
-                            <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-table"></i><span class="hide-menu">List Admin</span></a>
-                        </li>
-                        <li>
-                            <a class="waves-effect waves-dark" href="#"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Log Activity</span></a>
-                        </li>
+                            <a class="has-arrow " href="#" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Admin</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="">Add Admin</a></li>
+                                <li><a href="">List Admin</a></li>
+                            </ul>
+                        </li>                  
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->

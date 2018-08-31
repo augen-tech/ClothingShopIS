@@ -1,4 +1,4 @@
-@extends('layouts.masterSuperAdmin')
+@extends('layouts.app')
 
 @section('pageWrapper')
 
