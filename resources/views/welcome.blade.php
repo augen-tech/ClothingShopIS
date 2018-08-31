@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="links">
-                    <a href={{ route('superadmin.showlistadmin')}}>Test</a>
+                    <a href={{ route('superadmin.showlistadmin')}}>App </a>
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
