@@ -20,4 +20,5 @@ Route::get('/app', function () {
 });
 
 Route::get('/superadmin', 'SuperAdmin\SuperAdminController@ShowListAdmin') ->name('superadmin.showlistadmin');
-Route::get('/superadmin/addAdmin', 'SuperAdmin\SuperAdminController@FormCreateAdmin') ->name('superadmin.formCreateAdmin');
+Route::get('/addadmin', 'SuperAdmin\SuperAdminController@FormCreateAdmin') ->name('superadmin.formCreateAdmin');
+Route::get('/profileadmin', 'SuperAdmin\SuperAdminController@ProfileAdmin') ->name('superadmin.profileAdmin');

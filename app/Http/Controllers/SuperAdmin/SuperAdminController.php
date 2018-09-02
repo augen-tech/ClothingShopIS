@@ -16,4 +16,9 @@ class SuperAdminController extends Controller
     {
         return view('superAdmin/formCreateAdmin');
     }
+
+    public function ProfileAdmin()
+    {
+        return view('superAdmin/profileAdmin');
+    }
 }
