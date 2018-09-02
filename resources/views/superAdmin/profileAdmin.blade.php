@@ -56,7 +56,7 @@
                         <div class="card">
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs profile-tab" role="tablist">
-                                <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Timeline</a> </li>
+                                <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Log Activity</a> </li>
                                 <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Profile</a> </li>
                                 <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Settings</a> </li>
                             </ul>
@@ -70,7 +70,7 @@
                                             <option value="2">March</option>
                                             <option value="3">April</option>
                                         </select>
-                                        <h4 class="card-title">Projects of the Month</h4>
+                                        <h4 class="card-title">Activity of the Month</h4>
                                         <div class="table-responsive m-t-40">
                                             <table class="table stylish-table">
                                                 <thead>
