@@ -19,7 +19,7 @@ class Items extends Model
         'stocks',
     ];
 
-    public function item_crud_logs(){
+    public function item_crud_log(){
         return $this->hasOne(Item_crud_logs::class);
     }
 
@@ -43,11 +43,11 @@ class Items extends Model
         return $this->belongsTo(Item_sizes::class);
     }
 
-    public function colors(){
+    public function color(){
         return $this->belongsTo(Colors::class);
     }
 
-    public function suppliers(){
+    public function supplier(){
         return $this->belongsTo(Suppliers::class);
     }
 }
