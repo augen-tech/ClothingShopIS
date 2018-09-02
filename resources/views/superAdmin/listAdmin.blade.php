@@ -60,7 +60,7 @@
                                             <tr>
                                                 <td>1</td>
                                                 <td>
-                                                    <a href="javascript:void(0)"><img src="../assets/images/users/4.jpg" alt="user" width="40" class="img-circle" /> Genelia Deshmukh</a>
+                                                    <a href="{{ route('superadmin.profileAdmin')}}"><img src="../assets/images/users/4.jpg" alt="user" width="40" class="img-circle" /> Genelia Deshmukh</a>
                                                 </td>
                                                 <td>genelia@gmail.com</td>
                                                 <td>+123 456 789</td>

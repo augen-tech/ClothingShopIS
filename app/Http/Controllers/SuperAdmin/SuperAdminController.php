@@ -7,6 +7,10 @@ use App\Http\Controllers\Controller;
 
 class SuperAdminController extends Controller
 {
+    public function Dashboard()
+    {
+        return view('superAdmin/dashboard');
+    }
     public function ShowListAdmin()
     {
         return view('superAdmin/listAdmin');

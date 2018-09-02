@@ -19,6 +19,7 @@ Route::get('/app', function () {
     return view('layout.app');
 });
 
-Route::get('/superadmin', 'SuperAdmin\SuperAdminController@ShowListAdmin') ->name('superadmin.showlistadmin');
+Route::get('/superadmin', 'SuperAdmin\SuperAdminController@Dashboard') ->name('superadmin.dashboard');
+Route::get('/listadmin', 'SuperAdmin\SuperAdminController@ShowListAdmin') ->name('superadmin.showListAdmin');
 Route::get('/addadmin', 'SuperAdmin\SuperAdminController@FormCreateAdmin') ->name('superadmin.formCreateAdmin');
 Route::get('/profileadmin', 'SuperAdmin\SuperAdminController@ProfileAdmin') ->name('superadmin.profileAdmin');
