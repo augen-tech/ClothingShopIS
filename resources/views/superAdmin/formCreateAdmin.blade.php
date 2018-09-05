@@ -21,18 +21,23 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Add New Admin</h4>
-                                <form class="form-material m-t-40">
+                                <form class="form-material m-t-40" action="{{ route('superadmin.admin.store') }}" method="POST" > 
+                                @csrf
                                     <div class="form-group">
                                         <label>Username</label>
-                                        <input type="text" class="form-control form-control-line"> </div>
+                                        <input name="username" type="text" class="form-control form-control-line"> </div>
                                     <div class="form-group">
                                         <label>Password</label>
-                                        <input type="password" class="form-control"> </div>
-                                    <div class="form-group">
+                                        <input name="password" type="password" class="form-control"> </div>
+                                    <!-- <div class="form-group">
                                         <label>Photo</label>
                                         <div class="fileinput fileinput-new input-group" data-provides="fileinput">
                                             <div class="form-control" data-trigger="fileinput"> <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div> <span class="input-group-addon btn btn-default btn-file"> <span class="fileinput-new">Select file</span> <span class="fileinput-exists">Change</span>
-                                            <input type="file" name="..."> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a> </div>
+                                            <input type="file" > </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a> </div>
+                                    </div> -->
+                                    <div class="form-actions pull-right">
+                                        <button type="button" class="btn btn-inverse">Cancel</button>
+                                        <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i>Submit</button>
                                     </div>
                                 </form>
                             </div>

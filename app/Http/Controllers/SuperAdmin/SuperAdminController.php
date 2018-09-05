@@ -4,6 +4,7 @@ namespace App\Http\Controllers\superAdmin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Admins;
 
 class SuperAdminController extends Controller
 {
@@ -13,7 +14,14 @@ class SuperAdminController extends Controller
     }
     public function ShowListAdmin()
     {
-        return view('superAdmin/listAdmin');
+        $admins = Admins::All();
+        return view('superAdmin/listAdmin', compact('admins'));
+    }
+   
+
+    public function ProfileAdmin()
+    {
+        return view('superAdmin/profileAdmin');
     }
 
     public function FormCreateAdmin()
@@ -21,8 +29,25 @@ class SuperAdminController extends Controller
         return view('superAdmin/formCreateAdmin');
     }
 
-    public function ProfileAdmin()
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
     {
-        return view('superAdmin/profileAdmin');
+        //
+        // return dd($request->all());
+        $data = [
+            'username' => $request->username,
+            'password' => $request->password,
+            'image_source_address' => "address"
+        ];
+
+        Admins::create($data);
+        // return redirect()->route('superadmin.showListAdmin');
+        
+
     }
 }

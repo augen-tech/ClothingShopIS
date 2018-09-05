@@ -23,3 +23,5 @@ Route::get('/superadmin', 'SuperAdmin\SuperAdminController@Dashboard') ->name('s
 Route::get('/listadmin', 'SuperAdmin\SuperAdminController@ShowListAdmin') ->name('superadmin.showListAdmin');
 Route::get('/addadmin', 'SuperAdmin\SuperAdminController@FormCreateAdmin') ->name('superadmin.formCreateAdmin');
 Route::get('/profileadmin', 'SuperAdmin\SuperAdminController@ProfileAdmin') ->name('superadmin.profileAdmin');
+
+Route::post('/superadminstore', 'SuperAdmin\SuperAdminController@Store') ->name('superadmin.admin.store');
