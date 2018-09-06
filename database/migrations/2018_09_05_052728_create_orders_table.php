@@ -20,7 +20,7 @@ class CreateOrdersTable extends Migration
             $table->string('shipping_address');
             $table->string('total');
             $table->string('created_order_at');
-            $table->string('status');
+            $table->integer('status');
             $table->timestamps();
         });
     }

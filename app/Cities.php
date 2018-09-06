@@ -37,6 +37,6 @@ class Cities extends Model
     }
 
     public function user(){
-        return $this->hasOne(Users::class);
+        return $this->hasOne(Guests::class);
     }
 }

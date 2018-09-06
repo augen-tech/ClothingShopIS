@@ -8,7 +8,7 @@ class Orders extends Model
 {
     //
     protected $fillable =[
-        'user_id',
+        'guest_id',
         'deliver_id',
         'shipping_address',
         'total',
@@ -17,7 +17,7 @@ class Orders extends Model
     ];
 
     public function user(){
-        return $this->belongsTo(Users::class);
+        return $this->belongsTo(Guests::class);
     }
 
     public function deliver(){
