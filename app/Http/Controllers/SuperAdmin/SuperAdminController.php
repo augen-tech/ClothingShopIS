@@ -46,7 +46,7 @@ class SuperAdminController extends Controller
         ];
 
         Admins::create($data);
-        // return redirect()->route('superadmin.showListAdmin');
+        return redirect()->route('superadmin.showListAdmin');
         
 
     }

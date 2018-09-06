@@ -25,3 +25,5 @@ Route::get('/addadmin', 'SuperAdmin\SuperAdminController@FormCreateAdmin') ->nam
 Route::get('/profileadmin', 'SuperAdmin\SuperAdminController@ProfileAdmin') ->name('superadmin.profileAdmin');
 
 Route::post('/superadminstore', 'SuperAdmin\SuperAdminController@Store') ->name('superadmin.admin.store');
+
+Route::get('/createCity', 'Admin\AdminController@CreateCity') ->name('admin.createCity');

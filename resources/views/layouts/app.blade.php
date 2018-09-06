@@ -144,6 +144,7 @@
                             <a class="has-arrow waves-effect waves-dark" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Admin</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{ route('superadmin.formCreateAdmin')}}">Add Admin</a></li>
+                                <li><a href="{{ route('superadmin.showListAdmin')}}">Add Branch</a></li>
                                 <li><a href="{{ route('superadmin.showListAdmin')}}">List Admin</a></li>
                             </ul>
                         </li>                  
