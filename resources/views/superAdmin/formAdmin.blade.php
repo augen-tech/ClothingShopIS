@@ -7,7 +7,7 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor m-b-0 m-t-0">New Admin</h3>
+                        <h3 class="text-themecolor m-b-0 m-t-0">{{ isset($admin) ? "Edit Admin" : "New Admin" }}</h3>                        
                     </div>
                 </div>
                 <!-- ============================================================== -->
@@ -21,7 +21,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Add New Admin</h4>
-                                <form class="form-material m-t-40" action="{{ route('superadmin.admin.update') }}" method="POST" > 
+                                <form class="form-material m-t-40" action="{{ isset($admin) ? {{ route('superadmin.admin.update', $admin->id) }} : {{ route('superadmin.admin.store') }}" method="POST" > 
                                 @csrf
                                     <div class="form-group">
                                         <label>Username</label>

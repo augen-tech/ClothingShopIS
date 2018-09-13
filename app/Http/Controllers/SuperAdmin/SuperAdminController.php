@@ -51,7 +51,8 @@ class SuperAdminController extends Controller
 
     public function FormCreateAdmin()
     {
-        return view('superAdmin/formCreateAdmin');
+        // return dd("asd");
+        return view('superAdmin/formAdmin');
     }
 
     /**
@@ -86,7 +87,7 @@ class SuperAdminController extends Controller
             // 'image_source_address' => "address"
         ]);
 
-        // return redirect()->route('superadmin.showListAdmin'),id;
+        return redirect()->route('superadmin.showListAdmin');
         
 
     }
