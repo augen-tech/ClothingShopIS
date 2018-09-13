@@ -35,14 +35,18 @@ class SuperAdminController extends Controller
     public function ProfileAdmin($id)
     {
         $admin = Admins::find($id)->first();
-        $item_crud_logs_ = Item_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
+        $item_crud_logs_ =Item_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
         $province_crud_logs_ = Province_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
         $city_crud_logs_ = City_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
         $deliver_crud_logs_ = Deliver_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
         $supplier_crud_logs_ = Supplier_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
         $order_crud_logs_ = Order_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
-        return view('superAdmin/profileAdmin', compact('admin','item_crud_logs_','province_crud_logs_','city_crud_logs_','deliver_crud_logs_','supplier_crud_logs_'
-                    ,'order_crud_logs_'));
+        $data = [
+            'item_crud_logs_' => $item_crud_logs_,
+            'province_crud_logs_' => $supplier_crud_logs_,
+        ];
+        // return dd($data);
+        return view('superAdmin/profileAdmin', compact('admin','data'));
     }
 
     public function FormCreateAdmin()

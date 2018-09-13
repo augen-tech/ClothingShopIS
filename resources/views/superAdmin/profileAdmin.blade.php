@@ -63,37 +63,32 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div class="tab-pane active" id="home" role="tabpanel">
+                                    <!-- new table -->
                                     <div class="card-body">
-                                        <select class="custom-select pull-right">
-                                            <option value="0" selected="">Item Logs</option>
-                                            <option value="1">Province Logs</option>
-                                            <option value="2">City Logs</option>
-                                            <option value="3">Order Logs</option>
-                                            <option value="4">Deliver Logs</option>
-                                            <option value="5">Supplier Logs</option>
-                                        </select>
-                                        <h4 class="card-title">Activity of the Month</h4>
+                                        <h4 class="card-title">Data Table</h4>
+                                        <h6 class="card-subtitle">Data table example</h6>
                                         <div class="table-responsive m-t-40">
-                                            <table class="table stylish-table">
+                                            <div id="myTable_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="myTable_length"><label>Show <select name="myTable_length" aria-controls="myTable" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="myTable_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="myTable"></label></div><table id="myTable" class="table table-bordered table-striped dataTable no-footer" role="grid" aria-describedby="myTable_info">
                                                 <thead>
-                                                    <tr>
-                                                        <th>Activity</th>
-                                                        <th>Item Id</th>
-                                                        <th>Field Name</th>
+                                                    <tr role="row">
+                                                    <th class="sorting_asc" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 174px;">Activity</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 276px;">Table Name</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 131px;">Field Name</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach($item_crud_logs_ as $row)
-                                                    <tr>
-                                                        <td>{{$row->crud_activity->action}}</td>
-                                                        <td>{{$row->item_id}}</td>
-                                                        <td>{{$row->field_name}}</span></td>
-                                                    </tr>
-                                                    @endforeach
-                                                </tbody>
-                                            </table>
+                                                    <tr role="row" class="odd">
+                                                        @foreach($data as $row)
+                                                        <tr>
+                                                            <td class="sorting_1">{{$row[0]->id}}</td>
+                                                            
+                                                        </tr>
+                                                        @endforeach
+                                                    </tr></tbody>
+                                            </table><div class="dataTables_info" id="myTable_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div><div class="dataTables_paginate paging_simple_numbers" id="myTable_paginate"><a class="paginate_button previous disabled" aria-controls="myTable" data-dt-idx="0" tabindex="0" id="myTable_previous">Previous</a><span><a class="paginate_button current" aria-controls="myTable" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="myTable" data-dt-idx="2" tabindex="0">2</a><a class="paginate_button " aria-controls="myTable" data-dt-idx="3" tabindex="0">3</a><a class="paginate_button " aria-controls="myTable" data-dt-idx="4" tabindex="0">4</a><a class="paginate_button " aria-controls="myTable" data-dt-idx="5" tabindex="0">5</a><a class="paginate_button " aria-controls="myTable" data-dt-idx="6" tabindex="0">6</a></span><a class="paginate_button next" aria-controls="myTable" data-dt-idx="7" tabindex="0" id="myTable_next">Next</a></div></div>
                                         </div>
                                     </div>
+                                    <!-- end new table -->
                                 </div>
                                 <!--second tab-->
                                 <div class="tab-pane" id="profile" role="tabpanel">
