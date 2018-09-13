@@ -52,6 +52,24 @@ class AdminController extends Controller
         return view('admin/listProvince', compact('provinces'));
     }
 
+    public function ListCity()
+    {
+        $cities = Cities::All();
+        return view('admin/listCity', compact('cities'));
+    }
+
+    public function ListItemType()
+    {
+        $itemTypes = Item_types::All();
+        return view('admin/listItemType', compact('itemTypes'));
+    }
+
+    public function ListColor()
+    {
+        $colors = Colors::All();
+        return view('admin/listColor', compact('colors'));
+    }
+
         /**
      * Store a newly created resource in storage.
      *
@@ -148,4 +166,46 @@ class AdminController extends Controller
         
 
     }
+
+    public function destroyProvince($id)
+    {
+        //
+        
+        $province = Provinces::find($id)->delete();
+        
+        return redirect()->route('admin.listProvince');
+
+    }
+
+    public function destroyCity($id)
+    {
+        //
+        
+        $city = Cities::find($id)->delete();
+        
+        return redirect()->route('admin.listCity');
+
+    }
+
+    public function destroyColor($id)
+    {
+        //
+        
+        $color = Colors::find($id)->delete();
+        
+        return redirect()->route('admin.listColor');
+
+    }
+
+    public function destroyItemType($id)
+    {
+        //
+        
+        $itemType = Item_types::find($id)->delete();
+        
+        return redirect()->route('admin.listItemType');
+
+    }
+
+    
 }

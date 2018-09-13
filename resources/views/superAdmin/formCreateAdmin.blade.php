@@ -21,7 +21,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Add New Admin</h4>
-                                <form class="form-material m-t-40" action="{{ route('superadmin.admin.store') }}" method="POST" > 
+                                <form class="form-material m-t-40" action="{{ route('superadmin.admin.update') }}" method="POST" > 
                                 @csrf
                                     <div class="form-group">
                                         <label>Username</label>

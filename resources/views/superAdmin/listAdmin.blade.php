@@ -37,27 +37,17 @@
                                                 <th>Delete</th>  
                                             </tr>
                                         </thead>
-                                        <div class="m-t-10">
-                                            <div class="d-flex">
-                                                
-                                                <div class="ml-auto">
-                                                    <div class="form-group">
-                                                        <input id="demo-input-search2" type="text" placeholder="Search" autocomplete="off">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <tbody>
                                             <!-- loop data -->
                                             @foreach($admins as $row)
                                             <tr>
-                                                <td>1</td>
+                                                <td>{{$row->id}}</td>
                                                 <td>
-                                                    <a href="{{ route('superadmin.profileAdmin')}}"><img src="../assets/images/users/4.jpg" alt="user" width="40" class="img-circle" /> {{$row->username}}</a>
+                                                    <a href="{{ route('superadmin.profileAdmin', $row->id) }}"><img src="../assets/images/users/4.jpg" alt="user" width="40" class="img-circle" /> {{$row->username}}</a>
                                                 </td>
                                                 <td>{{$row->password}}</td>                                                
                                                 <td>
-                                                    <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="ti-close" aria-hidden="true"></i></button>
+                                                    <a href="{{ route('superadmin.destroyAdmin', $row->id) }}"><span><i class="mdi mdi-delete" alt="alert" id="sa-params"></i></span></a>
                                                 </td>
                                             </tr>
 

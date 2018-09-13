@@ -32,6 +32,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Id</th>
+                                                <th>Province ID</th>
                                                 <th>Name</th>    
                                                 <th>Delete</th>  
                                             </tr>
@@ -47,12 +48,13 @@
                                         </div>
                                         <tbody>
                                             <!-- loop data -->
-                                            @foreach($provinces as $row)
+                                            @foreach($cities as $row)
                                             <tr>
                                                 <td>{{$row->id}}</td>
+                                                <td>{{$row->province_id}}</td>
                                                 <td>{{$row->name}}</td>                                            
                                                 <td>
-                                                    <a href="{{ route('admin.destroyProvince', $row->id) }}"><span><i class="mdi mdi-delete" alt="alert" id="sa-params"></i></span></a>
+                                                    <a href="{{ route('admin.destroyCity', $row->id) }}"><span><i class="mdi mdi-delete" alt="alert" id="sa-params"></i></span></a>
                                                 </td>
                                             </tr>
 

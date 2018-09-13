@@ -18,7 +18,7 @@ class CreateOrderCrudLogsTable extends Migration
             $table->string('order_id');
             $table->string('admin_id');
             $table->string('crud_activity_id');
-            $table->string('field_id');
+            $table->string('field_name');
             $table->timestamps();
         });
     }

@@ -36,4 +36,6 @@ class Admins extends Model
     public function city_crud_logs(){
         return $this->hasOne(City_crud_logs::class);
     }
+
+    protected $guarded = [];
 }

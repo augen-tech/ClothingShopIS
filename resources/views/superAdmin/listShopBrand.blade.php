@@ -7,7 +7,7 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor m-b-0 m-t-0">Province List</h3>
+                        <h3 class="text-themecolor m-b-0 m-t-0">Admin List</h3>
                     </div>
                     <div class="col-md-7 col-4 align-self-center">
                         <div class="d-flex m-t-10 justify-content-end">
@@ -28,16 +28,18 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table id="demo-foo-addrow" class="table color-table info-table" data-page-size="10">
+                                    <table id="demo-foo-addrow" class="table m-t-30 table-hover contact-list" data-page-size="10">
                                         <thead>
                                             <tr>
                                                 <th>Id</th>
-                                                <th>Name</th>    
-                                                <th>Delete</th>  
+                                                <th>Name</th>                                                
+                                                <th>city_id</th>
+                                                <th>address</th>  
+                                                <th>Action</th>  
                                             </tr>
                                         </thead>
                                         <div class="m-t-10">
-                                            <div class="d-flex">    
+                                            <div class="d-flex">
                                                 <div class="ml-auto">
                                                     <div class="form-group">
                                                         <input id="demo-input-search2" type="text" placeholder="Search" autocomplete="off">
@@ -47,12 +49,14 @@
                                         </div>
                                         <tbody>
                                             <!-- loop data -->
-                                            @foreach($provinces as $row)
+                                            @foreach($shopBrands as $row)
                                             <tr>
                                                 <td>{{$row->id}}</td>
-                                                <td>{{$row->name}}</td>                                            
+                                                <td>{{$row->name}}</td>
+                                                <td>{{$row->city_id}}</td>
+                                                <td>{{$row->address}}</td>                                                
                                                 <td>
-                                                    <a href="{{ route('admin.destroyProvince', $row->id) }}"><span><i class="mdi mdi-delete" alt="alert" id="sa-params"></i></span></a>
+                                                    <a href="{{ route('superadmin.destroyShopBrand', $row->id) }}"><span><i class="mdi mdi-delete" alt="alert" id="sa-params"></i></span></a>
                                                 </td>
                                             </tr>
 
