@@ -17,7 +17,8 @@ class City_crud_logsTableSeeder extends Seeder
                 'city_id' => rand(0,9),
                 'admin_id' => rand(0,9),
                 'crud_activity_id' => rand(0,2), 
-                'field_name' => "City",        
+                'field_name' => "City",   
+                'table_id' => "1",      
             ]);
         }
     }

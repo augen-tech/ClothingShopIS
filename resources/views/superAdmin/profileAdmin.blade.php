@@ -73,18 +73,34 @@
                                                     <tr role="row">
                                                     <th class="sorting_asc" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 174px;">Activity</th>
                                                     <th class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 276px;">Table Name</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 131px;">Field Name</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 131px;">Detail Object Name</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr role="row" class="odd">
-                                                        @foreach($data as $row)
-                                                            @foreach($row as $index => $row_)                                                        
+                                                        @foreach($data as $row)                                                   
                                                             <tr>
-                                                                <td class="sorting_1">{{$row[$index]->crud_activity->action}}</td>          
-                                                                <td class="sorting_1">{{$row[$index]->field_name}}</td>                                                            
+                                                                <td class="sorting_1">{{$row->crud_activity->action}}</td>
+                                                                @if ($row -> table_id == 0)
+                                                                    <td class="sorting_1">Province</td>
+                                                                    <td class="sorting_1">{{$row->province->name}}</td>
+                                                                @elseif ($row -> table_id == 1)
+                                                                    <td class="sorting_1">City</td>
+                                                                    <td class="sorting_1">{{$row->city->name}}</td>
+                                                                @elseif ($row -> table_id == 2)
+                                                                    <td class="sorting_1">Deliver</td>
+                                                                    <td class="sorting_1">{{$row->deliver->name}}</td>
+                                                                @elseif ($row -> table_id == 3)
+                                                                    <td class="sorting_1">Supplier</td>
+                                                                    <td class="sorting_1">{{$row->supplier->name}}</td>
+                                                                @elseif ($row -> table_id == 4)
+                                                                    <td class="sorting_1">Item</td>
+                                                                    <td class="sorting_1">{{$row->item->name}}</td>
+                                                                @elseif ($row -> table_id == 5)
+                                                                   <td class="sorting_1">Order</td>
+                                                                   <td class="sorting_1">{{$row->order->id}}</td>
+                                                                @endif
                                                             </tr>
-                                                            @endforeach
                                                         @endforeach
                                                     </tr></tbody>
                                             </table><div class="dataTables_info" id="myTable_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div><div class="dataTables_paginate paging_simple_numbers" id="myTable_paginate"><a class="paginate_button previous disabled" aria-controls="myTable" data-dt-idx="0" tabindex="0" id="myTable_previous">Previous</a><span><a class="paginate_button current" aria-controls="myTable" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="myTable" data-dt-idx="2" tabindex="0">2</a><a class="paginate_button " aria-controls="myTable" data-dt-idx="3" tabindex="0">3</a><a class="paginate_button " aria-controls="myTable" data-dt-idx="4" tabindex="0">4</a><a class="paginate_button " aria-controls="myTable" data-dt-idx="5" tabindex="0">5</a><a class="paginate_button " aria-controls="myTable" data-dt-idx="6" tabindex="0">6</a></span><a class="paginate_button next" aria-controls="myTable" data-dt-idx="7" tabindex="0" id="myTable_next">Next</a></div></div>

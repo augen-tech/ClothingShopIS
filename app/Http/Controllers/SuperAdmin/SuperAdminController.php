@@ -35,17 +35,32 @@ class SuperAdminController extends Controller
     public function ProfileAdmin($id)
     {
         $admin = Admins::find($id)->first();
-        $item_crud_logs_ =Item_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
+        $data = array();
         $province_crud_logs_ = Province_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
+        foreach($province_crud_logs_ as $row){
+            array_push($data, $row);
+        };
         $city_crud_logs_ = City_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
+        foreach($city_crud_logs_ as $row){
+            array_push($data, $row);
+        };
         $deliver_crud_logs_ = Deliver_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
+        foreach($deliver_crud_logs_ as $row){
+            array_push($data, $row);
+        };
         $supplier_crud_logs_ = Supplier_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
+        foreach($supplier_crud_logs_ as $row){
+            array_push($data, $row);
+        };
+        $item_crud_logs_ =Item_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
+        foreach($item_crud_logs_ as $row){
+            array_push($data, $row);
+        };
         $order_crud_logs_ = Order_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
-        $data = [
-            'item_crud_logs_' => $item_crud_logs_,
-            'province_crud_logs_' => $supplier_crud_logs_,
-        ];
-        // return dd($data);
+        foreach($order_crud_logs_ as $row){
+            array_push($data, $row);
+        };
+        
         return view('superAdmin/profileAdmin', compact('admin','data'));
     }
 
@@ -75,6 +90,12 @@ class SuperAdminController extends Controller
         return redirect()->route('superadmin.showListAdmin');
         
 
+    }
+
+    public function FormEditAdmin($id)
+    {
+        $admin = Admins::find($id)->first();
+        return view('superAdmin/formAdmin', compact('admin'));
     }
 
     public function UpdateAdmin($id, Request $request)

@@ -28,6 +28,7 @@ Route::get('/profileadmin/{id}', 'SuperAdmin\SuperAdminController@ProfileAdmin')
 Route::get('/destroyAdmin/{id}', 'SuperAdmin\SuperAdminController@destroyAdmin')->name('superadmin.destroyAdmin');
 Route::get('/destroyShopBrand/{id}', 'SuperAdmin\SuperAdminController@destroyShopBrand')->name('superadmin.destroyShopBrand');
 
+Route::get('/editadmin/{id}', 'SuperAdmin\SuperAdminController@FormEditAdmin') ->name('superadmin.formEditAdmin');
 Route::post('/superadmin/updateadmin/{id}', 'SuperAdmin\SuperAdminController@UpdateAdmin') ->name('superadmin.admin.update');
 
 Route::post('/superadminstore', 'SuperAdmin\SuperAdminController@Store') ->name('superadmin.admin.store');

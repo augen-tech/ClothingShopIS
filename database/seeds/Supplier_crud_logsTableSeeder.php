@@ -17,7 +17,8 @@ class Supplier_crud_logsTableSeeder extends Seeder
                 'supplier_id' => rand(0,9),
                 'admin_id' => rand(0,9),
                 'crud_activity_id' => rand(0,2), 
-                'field_name' => "Supplier",        
+                'field_name' => "Supplier", 
+                'table_id' => "3",        
             ]);
         }
     }

@@ -19,6 +19,7 @@ class CreateCityCrudLogsTable extends Migration
             $table->string('admin_id');
             $table->string('crud_activity_id');
             $table->string('field_name');
+            $table->string('table_id');
             $table->timestamps();
         });
     }

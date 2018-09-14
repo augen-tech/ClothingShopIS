@@ -47,7 +47,7 @@
                                                 </td>
                                                 <td>{{$row->password}}</td>                                                
                                                 <td>
-                                                    <a href="{{ route('superadmin.destroyAdmin', $row->id) }}"><span><i class="mdi mdi-pencil" alt="alert" id="sa-params"></i></span></a>
+                                                    <a href="{{ route('superadmin.formEditAdmin', $row->id) }}"><span><i class="mdi mdi-pencil" alt="alert" id="sa-params"></i></span></a>
                                                     <a href="{{ route('superadmin.destroyAdmin', $row->id) }}"><span><i class="mdi mdi-delete" alt="alert" id="sa-params"></i></span></a>
                                                 </td>
                                             </tr>

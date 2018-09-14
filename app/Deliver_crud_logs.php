@@ -12,6 +12,7 @@ class Deliver_crud_logs extends Model
         'admin_id',
         'crud_activity_id',
         'field_name',
+        'table_id'
     ];
 
     public function deliver(){

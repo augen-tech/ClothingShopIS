@@ -17,7 +17,8 @@ class Item_crud_logsTableSeeder extends Seeder
                 'item_id' => rand(0,9),
                 'admin_id' => rand(0,9),
                 'crud_activity_id' => rand(0,2), 
-                'field_name' => "Item",        
+                'field_name' => "Item",   
+                'table_id' => "4",      
             ]);
         }
     }

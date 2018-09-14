@@ -17,7 +17,8 @@ class Deliver_crud_logsTableSeeder extends Seeder
                 'deliver_id' => rand(0,3),
                 'admin_id' => rand(0,9),
                 'crud_activity_id' => rand(0,2), 
-                'field_name' => "Deliver",        
+                'field_name' => "Deliver",    
+                'table_id' => "2",     
             ]);
         }
     }

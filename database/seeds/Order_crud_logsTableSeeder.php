@@ -18,6 +18,7 @@ class Order_crud_logsTableSeeder extends Seeder
                 'admin_id' => rand(0,9),
                 'crud_activity_id' => rand(0,2), 
                 'field_name' => "Order",        
+                'table_id' => "5", 
             ]);
         }
     }

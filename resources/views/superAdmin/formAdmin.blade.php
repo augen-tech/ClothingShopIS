@@ -7,7 +7,7 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor m-b-0 m-t-0">{{ isset($admin) ? "Edit Admin" : "New Admin" }}</h3>                        
+                        <h3 class="text-themecolor m-b-0 m-t-0">{{ isset($admin) ? "Form Edit Admin" : "Form New Admin" }}</h3>                      
                     </div>
                 </div>
                 <!-- ============================================================== -->
@@ -20,15 +20,15 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Add New Admin</h4>
-                                <form class="form-material m-t-40" action="{{ isset($admin) ? {{ route('superadmin.admin.update', $admin->id) }} : {{ route('superadmin.admin.store') }}" method="POST" > 
+                                <h4 class="card-title">{{ isset($admin) ? "Edit Admin" : "Add New Admin" }}</h4>
+                                <form class="form-material m-t-40" action="{{ isset($admin) ? route('superadmin.admin.update', $admin->id)  : route('superadmin.admin.store') }}" method="POST" > 
                                 @csrf
                                     <div class="form-group">
                                         <label>Username</label>
-                                        <input name="username" type="text" class="form-control form-control-line"> </div>
+                                        <input name="username" type="text" class="form-control form-control-line" value="{{ isset ($admin) ? $admin->username : ""}}"></div>
                                     <div class="form-group">
                                         <label>Password</label>
-                                        <input name="password" type="password" class="form-control"> </div>
+                                        <input name="password" type="password" class="form-control" value="{{ isset ($admin) ? $admin->password : ""}}"> </div>
                                     <!-- <div class="form-group">
                                         <label>Photo</label>
                                         <div class="fileinput fileinput-new input-group" data-provides="fileinput">

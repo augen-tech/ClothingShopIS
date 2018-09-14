@@ -17,7 +17,8 @@ class Province_crud_logsTableSeeder extends Seeder
                 'province_id' => rand(0,9),
                 'admin_id' => rand(0,9),
                 'crud_activity_id' => rand(0,2), 
-                'field_name' => "Province",        
+                'field_name' => "Province",       
+                'table_id' => "0", 
             ]);
         }
     }
