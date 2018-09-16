@@ -36,16 +36,27 @@ class SuperAdminController extends Controller
     {
         $admin = Admins::find($id)->first();
         $item_crud_logs_ =Item_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
+        $data = $item_crud_logs_;
         $province_crud_logs_ = Province_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
+        for ($province_crud_logs_ as $row){
+            array_push($data, $row);
+        };
         $city_crud_logs_ = City_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
+        for ($city_crud_logs_ as $row){
+            array_push($data, $row);
+        }
         $deliver_crud_logs_ = Deliver_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
+        for ($deliver_crud_logs_ as $row){
+            array_push($data, $row);
+        }
         $supplier_crud_logs_ = Supplier_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
+        for ($Supplier_crud_logs_ as $row){
+            array_push($data, $row);
+        }
         $order_crud_logs_ = Order_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
-        $data = [
-            'item_crud_logs_' => $item_crud_logs_,
-            'province_crud_logs_' => $supplier_crud_logs_,
-        ];
-        // return dd($data);
+        for ($order_crud_logs_ as $row){
+            array_push($data, $row);
+        }
         return view('superAdmin/profileAdmin', compact('admin','data'));
     }
 
