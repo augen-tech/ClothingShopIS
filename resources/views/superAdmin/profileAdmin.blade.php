@@ -78,13 +78,23 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr role="row" class="odd">
-                                                        @foreach($data as $row)
-                                                            @foreach($row as $index => $row_)                                                        
+                                                        @foreach($data as $row)                                                    
                                                             <tr>
-                                                                <td class="sorting_1">{{$row[$index]->crud_activity->action}}</td>          
-                                                                <td class="sorting_1">{{$row[$index]->field_name}}</td>                                                            
+                                                                <td class="sorting_1">{{$row->crud_activity->action}}</td>        
+                                                                @if (Schema::hasColumn('$row', 'province_id'))
+                                                                    <td class="sorting_1">{{$row->province->name}}</td>        
+                                                                @elseif (Schema::hasColumn('$row', 'city_id'))
+                                                                    <td class="sorting_1">{{$row->city->name}}</td>
+                                                                @elseif (Schema::hasColumn('$row', 'deliver_id'))
+                                                                    <td class="sorting_1">{{$row->deliver->name}}</td>
+                                                                @elseif (Schema::hasColumn('$row', 'supplier_id'))
+                                                                    <td class="sorting_1">{{$row->supplier->name}}</td>
+                                                                @elseif (Schema::hasColumn('$row', 'item_id'))
+                                                                    <td class="sorting_1">{{$row->item->name}}</td>
+                                                                @elseif (Schema::hasColumn('$row', 'order_id'))
+                                                                    <td class="sorting_1">{{$row->order->id}}</td>                                                            
+                                                                @endif
                                                             </tr>
-                                                            @endforeach
                                                         @endforeach
                                                     </tr></tbody>
                                             </table><div class="dataTables_info" id="myTable_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div><div class="dataTables_paginate paging_simple_numbers" id="myTable_paginate"><a class="paginate_button previous disabled" aria-controls="myTable" data-dt-idx="0" tabindex="0" id="myTable_previous">Previous</a><span><a class="paginate_button current" aria-controls="myTable" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="myTable" data-dt-idx="2" tabindex="0">2</a><a class="paginate_button " aria-controls="myTable" data-dt-idx="3" tabindex="0">3</a><a class="paginate_button " aria-controls="myTable" data-dt-idx="4" tabindex="0">4</a><a class="paginate_button " aria-controls="myTable" data-dt-idx="5" tabindex="0">5</a><a class="paginate_button " aria-controls="myTable" data-dt-idx="6" tabindex="0">6</a></span><a class="paginate_button next" aria-controls="myTable" data-dt-idx="7" tabindex="0" id="myTable_next">Next</a></div></div>
