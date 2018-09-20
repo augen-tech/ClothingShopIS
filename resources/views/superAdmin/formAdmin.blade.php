@@ -25,10 +25,10 @@
                                 @csrf
                                     <div class="form-group">
                                         <label>Username</label>
-                                        <input name="username" type="text" class="form-control form-control-line" value="{{ isset ($admin) ? $admin->username : ""}}"></div>
+                                        <input name="username" type="text" class="form-control form-control-line" value="{{ isset ($admin) ? $admin->username : }}"></div>
                                     <div class="form-group">
                                         <label>Password</label>
-                                        <input name="password" type="password" class="form-control" value="{{ isset ($admin) ? $admin->password : ""}}"> </div>
+                                        <input name="password" type="password" class="form-control" value="{{ isset ($admin) ? $admin->password : }}"> </div>
                                     <!-- <div class="form-group">
                                         <label>Photo</label>
                                         <div class="fileinput fileinput-new input-group" data-provides="fileinput">

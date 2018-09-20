@@ -24,14 +24,17 @@ Route::get('/listadmin', 'SuperAdmin\SuperAdminController@ShowListAdmin') ->name
 Route::get('/listshopbrand', 'SuperAdmin\SuperAdminController@ListShopBrand') ->name('superadmin.listShopBrand');
 Route::get('/addadmin', 'SuperAdmin\SuperAdminController@FormCreateAdmin') ->name('superadmin.formCreateAdmin');
 Route::get('/profileadmin/{id}', 'SuperAdmin\SuperAdminController@ProfileAdmin') ->name('superadmin.profileAdmin');
+Route::get('/createbrand', 'SuperAdmin\SuperAdminController@FormCreateBrand') ->name('superadmin.formCreateBrand');
 
 Route::get('/destroyAdmin/{id}', 'SuperAdmin\SuperAdminController@destroyAdmin')->name('superadmin.destroyAdmin');
 Route::get('/destroyShopBrand/{id}', 'SuperAdmin\SuperAdminController@destroyShopBrand')->name('superadmin.destroyShopBrand');
 
 Route::get('/editadmin/{id}', 'SuperAdmin\SuperAdminController@FormEditAdmin') ->name('superadmin.formEditAdmin');
 Route::post('/superadmin/updateadmin/{id}', 'SuperAdmin\SuperAdminController@UpdateAdmin') ->name('superadmin.admin.update');
+Route::post('/superadmin/updatebrand/{id}', 'SuperAdmin\SuperAdminController@UpdateBrand') ->name('superadmin.brand.update');
 
 Route::post('/superadminstore', 'SuperAdmin\SuperAdminController@Store') ->name('superadmin.admin.store');
+Route::post('/brandstore', 'SuperAdmin\SuperAdminController@BrandStore') ->name('superadmin.brand.store');
 Route::post('/admincreatecitystore', 'Admin\AdminController@CreateCityStore') ->name('admin.admin.createCityStore');
 Route::post('/admincreateprovincestore', 'Admin\AdminController@CreateProvinceStore') ->name('admin.admin.createProvinceStore');
 Route::post('/admincreatedeliverstore', 'Admin\AdminController@CreateDeliverStore') ->name('admin.admin.createDeliverStore');

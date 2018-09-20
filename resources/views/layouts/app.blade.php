@@ -9,17 +9,17 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('material/images/favicon.png') }}">
     <title>Material Pro Admin Template - The Most Complete & Trusted Bootstrap 4 Admin Template</title>
     <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('material/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Footable CSS -->
-    <link href="{{ asset('assets/plugins/footable/css/footable.core.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/plugins/bootstrap-select/bootstrap-select.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('material/plugins/footable/css/footable.core.css') }}" rel="stylesheet">
+    <link href="{{ asset('material/plugins/bootstrap-select/bootstrap-select.min.css') }}" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('material/css/style.css') }}" rel="stylesheet">
     <!-- You can change the theme colors from here -->
-    <link href="{{ asset('css/colors/blue.css') }}" id="theme" rel="stylesheet">
+    <link href="{{ asset('material/css/colors/blue.css') }}" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -54,17 +54,17 @@
                         <b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="{{ asset('assets/images/logo-icon.png') }}" alt="homepage" class="dark-logo" />
+                            <img src="{{ asset('material/images/logo-icon.png') }}" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="{{ asset('assets/images/logo-light-icon.png') }}" alt="homepage" class="light-logo" />
+                            <img src="{{ asset('material/images/logo-light-icon.png') }}" alt="homepage" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span>
                          <!-- dark Logo text -->
-                         <img src="{{ asset('assets/images/logo-text.png') }}" alt="homepage" class="dark-logo" />
+                         <img src="{{ asset('material/images/logo-text.png') }}" alt="homepage" class="dark-logo" />
                          <!-- Light Logo text -->    
-                         <img src="{{ asset('assets/images/logo-light-text.png') }}" class="light-logo" alt="homepage" /></span> </a>
+                         <img src="{{ asset('material/images/logo-light-text.png') }}" class="light-logo" alt="homepage" /></span> </a>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
@@ -91,7 +91,7 @@
                                 <ul class="dropdown-user">
                                     <li>
                                         <div class="dw-user-box">
-                                            <div class="u-img"><img src="{{ asset('assets/images/users/1.jpg') }}" alt="user"></div>
+                                            <div class="u-img"><img src="{{ asset('material/images/users/1.jpg') }}" alt="user"></div>
                                             <div class="u-text">
                                                 <h4>Steave Jobs</h4>
                                                 <p class="text-muted">superAdmin</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
@@ -122,7 +122,7 @@
                 <!-- User profile -->
                 <div class="user-profile" style="background: url(../assets/images/background/user-info.jpg) no-repeat;">
                     <!-- User profile image -->
-                    <div class="profile-img"> <img src="{{ asset('assets/images/users/profile.png') }}" alt="user" /> </div>
+                    <div class="profile-img"> <img src="{{ asset('material/images/users/profile.png') }}" alt="user" /> </div>
                     <!-- User profile text-->
                     <div class="profile-text"> <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Markarn Doe</a>
                         <div class="dropdown-menu animated flipInY">
@@ -216,7 +216,7 @@
             <footer class="footer"> © 2018 Material Pro Admin by wrappixel.com </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
-            <!-- ============================================================== -->
+            <!-- ======================================================\======== -->
         </div>
         <!-- ============================================================== -->
         <!-- End Page wrapper  -->
@@ -228,30 +228,30 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('material/plugins/jquery/jquery.min.js') }}"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="{{ asset('assets/plugins/popper/popper.min.js') }}"></script>
-    <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('material/plugins/popper/popper.min.js') }}"></script>
+    <script src="{{ asset('material/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="{{ asset('js/jquery.slimscroll.js') }}"></script>
+    <script src="{{ asset('material/js/jquery.slimscroll.js') }}"></script>
     <!--Wave Effects -->
-    <script src="{{ asset('js/waves.js') }}"></script>
+    <script src="{{ asset('material/js/waves.js') }}"></script>
     <!--Menu sidebar -->
-    <script src="{{ asset('js/sidebarmenu.js') }}"></script>
+    <script src="{{ asset('material/js/sidebarmenu.js') }}"></script>
     <!--stickey kit -->
-    <script src="{{ asset('assets/plugins/sticky-kit-master/dist/sticky-kit.min.js') }}"></script>
-    <script src="{{ asset('assets/plugins/sparkline/jquery.sparkline.min.js') }}"></script>
+    <script src="{{ asset('material/plugins/sticky-kit-master/dist/sticky-kit.min.js') }}"></script>
+    <script src="{{ asset('material/plugins/sparkline/jquery.sparkline.min.js') }}"></script>
     <!--Custom JavaScript -->
-    <script src="{{ asset('js/custom.min.js') }}"></script>
+    <script src="{{ asset('material/js/custom.min.js') }}"></script>
     <!-- Footable -->
-    <script src="{{ asset('assets/plugins/footable/js/footable.all.min.js') }}"></script>
-    <script src="{{ asset('assets/plugins/bootstrap-select/bootstrap-select.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('material/plugins/footable/js/footable.all.min.js') }}"></script>
+    <script src="{{ asset('material/plugins/bootstrap-select/bootstrap-select.min.js') }}" type="text/javascript"></script>
     <!--FooTable init-->
-    <script src="{{ asset('js/footable-init.js') }}"></script>
+    <script src="{{ asset('material/js/footable-init.js') }}"></script>
     <!-- ============================================================== -->
     <!-- Style switcher -->
     <!-- ============================================================== -->
-    <script src="{{ asset('assets/plugins/styleswitcher/jQuery.style.switcher.js') }}"></script>
+    <script src="{{ asset('material/plugins/styleswitcher/jQuery.style.switcher.js') }}"></script>
 </body>
 
 </html>

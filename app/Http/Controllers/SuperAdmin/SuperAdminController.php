@@ -27,14 +27,14 @@ class SuperAdminController extends Controller
 
     public function ListShopBrand()
     {
-        $shopBrands = Shop_brands::All();
+        $shopBrands = Shop_brands::get();
         return view('superAdmin/listShopBrand', compact('shopBrands'));
     }
    
 
     public function ProfileAdmin($id)
     {
-        $admin = Admins::find($id)->first();
+        $admin = Admins::where('id' , '=', $id)->first();
         $data = array();
         $province_crud_logs_ = Province_crud_logs::where ('admin_id', '=' , $admin->id) ->get();
         foreach($province_crud_logs_ as $row){
@@ -60,7 +60,7 @@ class SuperAdminController extends Controller
         foreach($order_crud_logs_ as $row){
             array_push($data, $row);
         };
-        
+        // return dd($data);
         return view('superAdmin/profileAdmin', compact('admin','data'));
     }
 
@@ -70,13 +70,35 @@ class SuperAdminController extends Controller
         return view('superAdmin/formAdmin');
     }
 
+    public function FormCreateBrand()
+    {
+        // return dd("asd");
+        return view('superAdmin/formBrand');
+    }
+
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function Store(Request $request)
+    {
+        //
+        // return dd($request->all());
+        $data = [
+            'username' => $request->username,
+            'password' => $request->password,
+            'image_source_address' => "address"
+        ];
+
+        Admins::create($data);
+        return redirect()->route('superadmin.showListAdmin');
+        
+
+    }
+
+    public function BrandStore(Request $request)
     {
         //
         // return dd($request->all());
@@ -94,7 +116,7 @@ class SuperAdminController extends Controller
 
     public function FormEditAdmin($id)
     {
-        $admin = Admins::find($id)->first();
+        $admin = Admins::find($id)->get();
         return view('superAdmin/formAdmin', compact('admin'));
     }
 

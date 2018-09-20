@@ -53,7 +53,7 @@
                                             <tr>
                                                 <td>{{$row->id}}</td>
                                                 <td>{{$row->name}}</td>
-                                                <td>{{$row->city_id}}</td>
+                                                <td>{{$row->city['name']}}</td>
                                                 <td>{{$row->address}}</td>                                                
                                                 <td>
                                                     <a href="{{ route('superadmin.destroyShopBrand', $row->id) }}"><span><i class="mdi mdi-delete" alt="alert" id="sa-params"></i></span></a>

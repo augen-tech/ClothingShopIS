@@ -57,7 +57,6 @@
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs profile-tab" role="tablist">
                                 <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Log Activity</a> </li>
-                                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Profile</a> </li>
                                 <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Settings</a> </li>
                             </ul>
                             <!-- Tab panes -->
@@ -80,25 +79,25 @@
                                                     <tr role="row" class="odd">
                                                         @foreach($data as $row)                                                   
                                                             <tr>
-                                                                <td class="sorting_1">{{$row->crud_activity->action}}</td>
+                                                                <td class="sorting_1">{{$row->crud_activity['action']}}</td>
                                                                 @if ($row -> table_id == 0)
                                                                     <td class="sorting_1">Province</td>
-                                                                    <td class="sorting_1">{{$row->province->name}}</td>
+                                                                    <td class="sorting_1">{{$row->province['name']}}</td>
                                                                 @elseif ($row -> table_id == 1)
                                                                     <td class="sorting_1">City</td>
-                                                                    <td class="sorting_1">{{$row->city->name}}</td>
+                                                                    <td class="sorting_1">{{$row->city['name']}}</td>
                                                                 @elseif ($row -> table_id == 2)
                                                                     <td class="sorting_1">Deliver</td>
-                                                                    <td class="sorting_1">{{$row->deliver->name}}</td>
+                                                                    <td class="sorting_1">{{$row->deliver['name']}}</td>
                                                                 @elseif ($row -> table_id == 3)
                                                                     <td class="sorting_1">Supplier</td>
-                                                                    <td class="sorting_1">{{$row->supplier->name}}</td>
+                                                                    <td class="sorting_1">{{$row->supplier['name']}}</td>
                                                                 @elseif ($row -> table_id == 4)
                                                                     <td class="sorting_1">Item</td>
-                                                                    <td class="sorting_1">{{$row->item->name}}</td>
+                                                                    <td class="sorting_1">{{$row->item['name']}}</td>
                                                                 @elseif ($row -> table_id == 5)
                                                                    <td class="sorting_1">Order</td>
-                                                                   <td class="sorting_1">{{$row->order->id}}</td>
+                                                                   <td class="sorting_1">{{$row->order['id']}}</td>
                                                                 @endif
                                                             </tr>
                                                         @endforeach
@@ -109,32 +108,6 @@
                                     <!-- end new table -->
                                 </div>
                                 <!--second tab-->
-                                <div class="tab-pane" id="profile" role="tabpanel">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-3 col-xs-6 b-r"> <strong>Username</strong>
-                                                <br>
-                                                <p class="text-muted">{{$admin->username}}</p>
-                                            </div>
-                                            <div class="col-md-3 col-xs-6 b-r"> <strong>Mobile</strong>
-                                                <br>
-                                                <p class="text-muted">(123) 456 7890</p>
-                                            </div>
-                                            <div class="col-md-3 col-xs-6 b-r"> <strong>Email</strong>
-                                                <br>
-                                                <p class="text-muted">johnathan@admin.com</p>
-                                            </div>
-                                            <div class="col-md-3 col-xs-6"> <strong>Location</strong>
-                                                <br>
-                                                <p class="text-muted">London</p>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <p class="m-t-30">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries </p>
-                                        <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                    </div>
-                                </div>
                                 <div class="tab-pane" id="settings" role="tabpanel">
                                     <div class="card-body">
                                         <form class="form-material m-t-40" action="{{ route('superadmin.admin.update', $admin->id) }}" method="POST" > 
